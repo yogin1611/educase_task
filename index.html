@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubik's Cube Solver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="controls">
+        <!-- The SVG representation of the cube will be inserted here by JavaScript -->
+        <div id="cube-display"></div>
+        <div class="control-panel">
+            <h2>Controls</h2>
+            <div class="button-group">
+                <button onclick="performMove('U')">U</button>
+                <button onclick="performMove('D')">D</button>
+                <button onclick="performMove('L')">L</button>
+                <button onclick="performMove('R')">R</button>
+                <button onclick="performMove('F')">F</button>
+                <button onclick="performMove('B')">B</button>
+                <button onclick="performMove('U_prime')">U'</button>
+                <button onclick="performMove('D_prime')">D'</button>
+                <button onclick="performMove('L_prime')">L'</button>
+                <button onclick="performMove('R_prime')">R'</button>
+                <button onclick="performMove('F_prime')">F'</button>
+                <button onclick="performMove('B_prime')">B'</button>
+            </div>
+            <hr>
+             <div class="button-group" style="grid-template-columns: 1fr 1fr;">
+                <button class="scramble-btn" onclick="scrambleCube()">Scramble Cube</button>
+                <button class="action-btn" onclick="solveCube()">Solve Cube</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="solution">
+        <div class="solution-panel">
+            <h2>Solution Steps</h2>
+            <div id="solution-steps">
+                Click "Solve Cube" to see the solution.
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
